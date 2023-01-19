@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Fredoka+One&family=Raleway:wght@400;600&display=swap');
+
+$font-family: 'Abril Fatface', cursive;
+$display-font-family: 'Anton', sans-serif;
+// $font-family: 'Fredoka One', cursive;
+$heading-font-family: 'Raleway', sans-serif;
+
+// $font-family-sans-serif:;
+// $display-font-family:;
+// $heading-font-family:;
+
+// $btn-font-family:;
+// $input-font-family:;
+
+
+//sass variable overiwrite
+// $body-bg:rgb(161, 154, 154);
+// $body-color:#111;
+
+// $enable-rounded:false;
+// $spacer:1rem;
+
+//overiwrite map
+// $theme-colors: (
+//     'primary': pink,
+//     'secondary': skyblue,
+//     'hhz': violet
+// );
+
+// customize button 
+// $btn-padding-x:30px;
+// $btn-padding-y:8px;
+// $btn-font-size:14px;
+// $btn-border-width:3px;
+// $btn-border-radius:50px;
+
+// form control 
+// $input-bg:rgb(238, 234, 234);
+// $input-border-radius:50px;
+// $input-padding-x:20px;
+// $input-padding-y:10px;
+// form-select-indicator:url('');
+
+// $btn-box-shadow:5px 15px 15px #000;
+
+// $carousel-control-color:orange;
+// $carousel-control-width:15%;
+// $carousel-control-opacity:0.5;
+// $carousel-control-hover-opacity:1;
+// $carousel-control-prev-icon-bg:;
+// $carousel-control-prev-icon-bg:;
+
+
+// $carousel-indicator-width:10px;
+// $carousel-indicator-height:10px;
+// $carousel-indicator-active-bg:orange;
+// $carousel-indicator-spacer:5px;
+
+
+// $accordion-button-icon:
+// $accordion-button-active-icon
+
+// $modal-background-bg:orange;
+// $modal-backdrop-opacity:0.9;
+
+// $primary:orange;
+
+// $container-max-widths: (
+//     sm:540px,
+//     md:720px,
+//     lg:900px
+// );
+
+$spacer:1rem;
+
+// spacer and gutter
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

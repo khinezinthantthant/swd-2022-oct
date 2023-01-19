@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span>san kyi tar</span>
+    hello min ga lar par
+
+    <ul>
+        <li>apple</li>
+        <li>orange</li>
+        <li>mango</li>
+        <li>banana</li>
+
+    </ul>
+
+    <script>
+
+        const textNode = document.createTextNode("cccc");
+        const ul = document.querySelector("ul");
+
+        ul.before(textNode);
+
+        // // console.dir(ul.childNodes);
+        // // console.dir(ul.children);
+        // console.log(ul.previousElementSibling);
+        // console.log(ul.previousSibling);
+
+        // ul.previousElementSibling.innerText = "aaaa";
+        // ul.previousSibling.data="AAAA";
+
+
+        // console.log(ul.innerText);
+        // console.log(ul.innerHTML);
+
+        // const box = document.createDocumentFragment();
+
+        // const h1 = document.createElement("h1");
+        // h1.innerText ="min ga lar par";
+
+        // const p = document.createElement("p");
+        // p.innerText = "san kyi tar par";
+
+
+        // const h2 = document.createElement("h2");
+        // h2.innerText = "h2 h2";
+
+        // box.append(h1);
+        // box.append(p);
+        // box.prepend(h2);
+
+        // if(true){
+        //     document.body.append(box);
+        // }
+
+        // true && document.body.append(box);
+
+        // console.dir(box);
+
+        // function createLi(text){
+        //     const li = document.createElement("li");
+        //     li.innerText = text;
+        //     return li;
+        // }
+
+        // const ul = document.createElement("ul");
+        // document.body.append(createLi("Apple"));
+        // document.body.append(createLi("Orange"));
+        // document.body.append(createLi("Mango"));
+        // document.body.append(createLi("Banana"));
+
+
+
+        // create Element h1 
+        // const h1 = document.createElement("h1");
+        // h1.innerText = "Min Ga Lar Par";
+        // console.log(h1);
+
+        // const p = document.createElement("p");
+        // p.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempore dicta, inventore eum mollitia sed quas culpa placeat, animi minima labore adipisci deserunt. Asperiores aliquid quia natus, reprehenderit quae fugiat?';
+        // console.log(p);
+
+        // const a = document.createElement("a");
+        // a.innerHTML = "Google";
+        // a.href="https://google.com";
+        // a.target="_blank";
+
+        // const img = document.createElement("img");
+        // img.src="./laptop.jpg";
+        // img.style.width="300px";
+        // console.log(img);
+
+        // // put h1 element to body 
+        // document.body.append(h1);
+        // document.body.append(p);
+        // document.body.append(img);
+        
+    </script>
+</body>
+</html>

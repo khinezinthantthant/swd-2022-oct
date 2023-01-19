@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <!-- <svg viewBox="0 0 1043.63 592.71" class="at au"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path></g></g></svg> -->
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-journals brand-logo"></i>
+      </a>
+      <div class="input-group w-25">
+        <span class="input-group-text border-end-0">
+          <i class="bi bi-search"></i>
+        </span>
+        <input type="text" placeholder="Search in my blog" class="form-control border-start-0">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <i class="bi bi-pencil-square"></i> Write
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bg-success rounded-pill text-white" href="register.html">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Sign In</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/user.png" height="30" class="border rounded-circle" alt="">
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="blog">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-8">
+            <div class="row my-5 align-items-center">
+                <div class="col-1">
+                    <img class="w-100 rounded-circle" src="https://miro.medium.com/fit/c/43/43/1*76Pqx0N9lf0k9Q-Ttor8Yg.jpeg" alt="">
+                </div>
+                <div class="col-6">
+                    <p class="mb-0 para fw-bold">Patrick Hoefler</p>
+                    <p class="mb-0 para small text-black-50">Dec 22 . 7 min read</p>
+                </div>
+                <div class="col-4">
+                    <div class="text-end personal-social-links">
+                        <a href="#" class="text-decoration-none text-muted h5">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none text-muted h5">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none text-muted h5">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none text-muted h5">
+                            <i class="bi bi-clipboard"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-link">
+                        <i class="bi bi-bookmark-plus text-dark h5"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="article-detail para">
+                <h3 class="mb-5">I am switching from VS code from Vim</h3>
+                <p class="mb-4">
+                    An operation in pandas produces a copy, when the underlying data of the parent DataFrame and the new DataFrame are not shared. A view is an object that does share data with the parent object. A modification to the view can potentially impact the parent object.
+                </p>
+                <p class="mb-4">
+                    A getitem operation on a DataFrame or Series returns a subset of the initial object. The subset might consist of one or a set of columns, one or a set of rows or a mixture of both. A setitem operation on a DataFrame or Series updates a subset of the initial object. The subset itself is defined by the arguments to the calls.
+                </p>
+                <h4 class="mb-3 ">What I do?</h4>
+                <p class="mb-4">
+                    Let’s look at how indexing operations currently work in pandas. If you are already familiar with indexing operations, you can jump to the next section. But be aware, there are many cases with different forms of behavior. 
+                </p>
+                <h4 class="mb-3 ">
+                    What is crucial for me in an editor?
+                </h4>
+                <p class="mb-4">
+                    A getitem operation on a DataFrame or Series returns a subset of the initial object. 
+                </p>
+                <ul>
+                    <li>
+                        An operation in pandas produces a copy, when the underlying
+                    </li>
+                    <li>
+                        Let’s look at how indexing operations currently work in pandas. If you are already
+                    </li>
+                    <li>
+                        A modification to the view can potentially impact the parent object.
+                    </li>
+                    <li>
+                        The subset itself is defined
+                    </li>
+                    <li>
+                        A getitem operation on a DataFrame or Series returns a subset of the initial object. The subset might consist
+                    </li>
+                </ul>
+                <p class="mb-4">
+                    If you are already familiar with indexing operations, you can jump to the next section. But be aware, there are many cases with different forms of behavior. The exact behavor is hard to predict.
+                </p>
+                <img class="w-100 mb-4" src="https://miro.medium.com/max/576/1*c2867ICA_q6okdAz-EfhmA.jpeg" alt="">
+
+                <h4 class="mb-3">
+                    Introduction
+                </h4>
+                <p class="mb-4">
+                    Indexing operations in pandas are quite flexible and thus, have many cases that can behave quite different and therefore produce unexpected results. Additionally, it is hard to predict when a SettingWithCopyWarningis raised and what this means exactly. I’ll show a couple of different scenarios and how each operation might impact your code. Afterwards, we will look at a new feature called Copy on Write that helps you to get rid of the inconsistencies and of SettingWithCopyWarnings. We will also investigate how this might impact performance and other methods in general. I am a member of the pandas core team.
+
+                </p>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="my-5">
+              <div class="row">
+                <div class="col-6">
+                  <h4 class="fw-bold">268K</h4>
+                  <p>Stories</p>
+                </div>
+                <div class="col-6">
+                  <h4 class="fw-bold">92K</h4>
+                  <p>Writers</p>
+                </div>
+              </div>
+              <div class="users">
+                <img alt="simbu" class="" src="https://miro.medium.com/fit/c/32/32/1*yk78N4al8f984IkgM6OdRg.png"
+                  width="36" height="36">
+                <img alt="Jerry An" class="" src="https://miro.medium.com/fit/c/32/32/1*_sgIYjG5WQsfX3VJvXGRLA.jpeg"
+                  width="36" height="36">
+                <img alt="Jakub Jirak" class=""
+                  src="https://miro.medium.com/fit/c/32/32/1*koRv2gX-m8_iGuairVseTQ.jpeg" width="36" height="36">
+                <img alt="Maximilian Beck" class=""
+                  src="https://miro.medium.com/fit/c/32/32/1*46q6LVMRL-ndjxBUzwAvVA@2x.jpeg" width="36" height="36">
+                <img alt="Lynn Myat Bhone Htut" class=""
+                  src="https://miro.medium.com/freeze/fit/c/32/32/1*zlb6XH2zi6hoWe0zU1Kjxw.gif" width="36"
+                  height="36">
+                <img alt="Samuele" class="" src="https://miro.medium.com/fit/c/32/32/1*s0-cdAECbdAc9067P3_BLA.png"
+                  width="36" height="36">
+                <img alt="Rahul Kapoor" class=""
+                  src="https://miro.medium.com/fit/c/32/32/1*RKG1fdEcBbOfcvzNvR38wA.jpeg" width="36" height="36">
+
+              </div>
+            </div>
+            <hr>
+            <div class="position-sticky" style="top:30px;">
+              <div class="topic mb-5">
+                <p class="fw-bold mt-5 mb-3">Related Topics</p>
+                <div class="">
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Software Development
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Java Script
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Web Development
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Coding
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Technology
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Python
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Data Science
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Software Engineering
+                  </a>
+                  <a href="#" class="btn btn-secondary mb-2">
+                    Machine Learning
+                  </a>
+                </div>
+              </div>
+
+              <div class="top-writers mb-5">
+                <p class="fw-bold mt-5 mb-3">Top Writers</p>
+                <div class="writer row g-3 mb-3">
+                  <div class="col-2">
+                    <img class="rounded-circle w-100" src="https://miro.medium.com/fit/c/29/29/0*u9Ha3uTCjEmW_3gn.gif"
+                      alt="">
+                  </div>
+                  <div class="col-7">
+                    <p class="small fw-bold mb-0">
+                      javinpaul
+                    </p>
+                    <p class="small text-truncate">
+                      I am Java programmer, blogger, working on Java,
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <a href="#" class="btn btn-success">Follow</a>
+                  </div>
+
+                </div>
+
+                <div class="writer row g-3 mb-3">
+                  <div class="col-2">
+                    <img class="rounded-circle w-100"
+                      src="https://miro.medium.com/fit/c/29/29/1*veEX4-CiLz5jqUjwWfQo_Q.jpeg" alt="">
+                  </div>
+                  <div class="col-7">
+                    <p class="small fw-bold mb-0">
+                      Frank Andrade
+                    </p>
+                    <p class="small text-truncate">
+                      6M+ Views on Medium || Code Less, Earn More: Make
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <a href="#" class="btn btn-success">Follow</a>
+                  </div>
+
+                </div>
+
+                <div class="writer row g-3 mb-3">
+                  <div class="col-2">
+                    <img class="rounded-circle w-100"
+                      src="https://miro.medium.com/fit/c/29/29/2*bSxBzySUaoCIbUat-AEy6A.jpeg" alt="">
+                  </div>
+                  <div class="col-7">
+                    <p class="small fw-bold mb-0">
+                      Bhargav Bachina
+                    </p>
+                    <p class="small text-truncate">
+                      Entrepreneur | 600+ Tech Articles | Subscribe to
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <a href="#" class="btn btn-success">Follow</a>
+                  </div>
+
+                </div>
+
+                <div class="writer row g-3 mb-3">
+                  <div class="col-2">
+                    <img class="rounded-circle w-100"
+                      src="https://miro.medium.com/fit/c/29/29/1*h7N9lGEJNfg1RtRbm--OCw.jpeg" alt="">
+                  </div>
+                  <div class="col-7">
+                    <p class="small fw-bold mb-0">
+                      Giorgos Myrianthous
+                    </p>
+                    <p class="small text-truncate">
+                      I write about Python, DataOps and MLOps
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <a href="#" class="btn btn-success">Follow</a>
+                  </div>
+
+                </div>
+
+                <div class="writer row g-3 mb-3">
+                  <div class="col-2">
+                    <img class="rounded-circle w-100"
+                      src="https://miro.medium.com/fit/c/29/29/1*iS1UwYrqJUAkVtLVR_mZXQ.jpeg" alt="">
+                  </div>
+                  <div class="col-7">
+                    <p class="small fw-bold mb-0">
+                      fatfish
+                    </p>
+                    <p class="small text-truncate">
+                      Hi friends, I am a front-end engineer from Alibaba, let’s
+                    </p>
+                  </div>
+                  <div class="col-3">
+                    <a href="#" class="btn btn-success">Follow</a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div>
+                <p class="text-black-50">Visit the archive</p>
+                <div>
+                  <a href="#" class="text-decoration-none text-black-50">Help</a>
+                  <a href="#" class="text-decoration-none text-black-50">Status</a>
+                  <a href="#" class="text-decoration-none text-black-50">Writers</a>
+                  <a href="#" class="text-decoration-none text-black-50">Blog</a>
+                  <a href="#" class="text-decoration-none text-black-50">Careers</a>
+                  <a href="#" class="text-decoration-none text-black-50">Privacy</a>
+                  <a href="#" class="text-decoration-none text-black-50">Terms</a>
+                  <a href="#" class="text-decoration-none text-black-50">About</a>
+                  <a href="#" class="text-decoration-none text-black-50">Text to speech</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

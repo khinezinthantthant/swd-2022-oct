@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div id="output" class="my-5">Your Text Here</div>
+
+                <div style="bottom: 30px;left: 0;right: 0;max-width: 500px;" class="bg-white shadow position-fixed border rounded pb-3 px-2 row g-3 mx-auto">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                            <label  class="form-label" for="">Say Something</label>
+                            <div>Count : <span id="count">0</span></div>
+                        </div>
+                        <textarea id="text" class="form-control" id="" cols="30" rows="7"></textarea>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label" for="">Font Family</label>
+                        <select class="form-select" name="" id="fontFamily">
+                            <option value="">Select Font</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <div class="">
+                            <label class="form-label" for="">Select Color</label>
+                            <input id="color" type="color" class="w-100 form-control form-control-color">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="">Font Size</label>
+                        <input id="fontSize" type="range" class="form-range" min="0" max="100" value="16" />
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+    <script src="./tc.js"></script>
+</body>     
+</html>
