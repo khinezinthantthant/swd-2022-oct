@@ -1,56 +1,91 @@
-const createBtn = document.querySelector("#createBtn");
 const textInput = document.querySelector("#textInput");
+const createBtn = document.querySelector("#createBtn");
 const lists = document.querySelector("#lists");
 
-const createLi =(text) =>{
-    const checkId = "flexCheck"+Date.now();
-    const li = document.createElement("li");
+const total = document.querySelector("#total");
+const doneTotal = document.querySelector("#doneTotal");
 
-    li.addEventListener("dblclick",edit);
+const data = ["min ga lar par","morning","god night"];
 
-    li.className = "list-group-item d-flex align-items-center";
-    li.innerHTML = ` 
-    <div class="">
-        <input 
-        id="${checkId}" 
-        type="checkbox" 
-        class=" form-check-input"
-        onchange="done(event)"
-        >
-        <label for="${checkId}" class=" form-check-label">${text}</label>
-    </div>
-    <button onclick="del(event)" class="btn btn-danger btn-sm ms-auto">Del</button>
-`;
+const counter = () => {
+    const totalCount = lists.children.length;
+    const doneTotalCount = [...lists.children].filter(
+        (el) => el.querySelector(".form-check-input").checked === true
+        ).length;
 
-    return li;
+    total.innerText = totalCount;
+    doneTotal.innerText = doneTotalCount;
 }
 
-const addList =() =>{
-    lists.append(createLi(textInput.value));
-    textInput.value = null;
+const createLi = (text) => {
+    const dynamicId = "checkedId"+Math.random();
+
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex align-items-center";
+    li.innerHTML = `
+    <div class="form-check">
+        <input id="${dynamicId}" type="checkbox" class="form-check-input" onchange="done(event)">
+        <label for="${dynamicId}" class="form-check-label">
+        ${text}
+        </label>
+    </div>
+    <div class="ms-auto">
+        <button class="btn btn-danger btn-sm " onclick="edit(event)">Edit</button>
+        <button class="btn btn-danger btn-sm " onclick="del(event)">Del</button>
+    </div>
+`;
+
+return li;
+}
+
+
+data.forEach((d) => {
+    // console.log(d);
+    lists.append(createLi(d));
+});
+
+
+const addList = () => {
+    if(textInput.value.trim()){
+        lists.append(createLi(textInput.value));
+        textInput.value = null;
+
+    counter();
+
+    }else{
+        alert("Input is empty");
+    }
+    
 }
 
 const del = (event) => {
-    // console.log(event.target.parentElement);
-    event.target.parentElement.remove();
+    if(confirm("Are you sure to delete")){
+        event.target.closest(".list-group-item").remove();
+        counter();
+    }
 }
 
 const done = (event) => {
-    // console.log(event.target.nextElementSibling);
-    event.target.nextElementSibling.classList.toggle("text-decoration-line-through");
+    event.target.nextElementSibling.className ="text-decoration-line-through";
+    counter();
 }
 
 const edit = (event) => {
-    const oldText = event.target.querySelector(".form-check-label").innerText;
-    const newText = window.prompt("Input New Text",oldText);
-    event.target.querySelector(".form-check-label").innerText = newText;
+   const old = event.target.closest(".list-group-item").querySelector(".form-check-label");
+   const newText = prompt("Input New Text",old.innerText);
+   
+   if(newText && newText.trim()){
+    old.innerText = newText;
+
+   }
 }
 
-createBtn.addEventListener("click",addList); 
-
+createBtn.addEventListener("click",addList);
 textInput.addEventListener("keyup",(event) => {
-    // console.dir(event.keyCode);
     if(event.keyCode === 13){
         addList();
     }
 });
+
+
+window.addEventListener("load",counter);

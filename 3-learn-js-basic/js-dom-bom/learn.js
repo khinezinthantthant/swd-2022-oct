@@ -45,13 +45,11 @@
 
 // const showAlert = (event,x,y) => alert(x+y);
 
-
 // const btn = document.querySelector("#btn");
 // btn.onclick = showAlert.bind(null,event,1,2);
 // console.dir(btn);
 
 // btn.addEventListener('click',showAlert.bind(null,event,1,2));
-
 
 // const h1 = document.querySelector("h1");
 
@@ -59,18 +57,14 @@
 // h1.addEventListener("mouseout",() => console.log("Mouse Out Event"));
 // h1.addEventListener("click",(e) => console.log(e,"Mouse Move Event"));
 
+// const input = document.querySelector("input");
+// // const select = document.querySelector("select");
 
-
-
-
-const input = document.querySelector("input");
-// const select = document.querySelector("select");
-
-input.addEventListener("change",function(event){
-    // console.log(this);
-    // console.log(this.valueAsDate);
-    console.log(event.target.valueAsDate);
-})
+// input.addEventListener("change", function (event) {
+//   // console.log(this);
+//   // console.log(this.valueAsDate);
+//   console.log(event.target.valueAsDate);
+// });
 
 // input.addEventListener("change",()=> console.log("change Event"));
 // select.addEventListener("change",()=> console.log("change Event"));
@@ -81,7 +75,6 @@ input.addEventListener("change",function(event){
 // input.addEventListener("keydown" , () => console.log("KeyDown Event"));
 // input.addEventListener("keyup" , () => console.log("KeyUp Event"));
 // input.addEventListener("keypress" , () => console.log("KeyPress Event"));
-
 
 // const form = document.querySelector("form");
 // form.addEventListener("submit",e=>{
@@ -102,8 +95,20 @@ input.addEventListener("change",function(event){
 // console.log("hello 2");
 // console.log("hello 3");
 
+// document.querySelector("a").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log(e);
+// });
 
-document.querySelector("a").addEventListener("click",e =>{
-    e.preventDefault();
-    console.log(e); 
-});
+
+const btn = document.querySelector("#btn");
+const showConsole = (event) => {
+    // console.log("U Click");
+    console.log(event);
+    // btn.removeEventListener("click",showConsole);
+}
+
+btn.addEventListener("click",showConsole);
+
+
+// console.log(new EventTarget());
