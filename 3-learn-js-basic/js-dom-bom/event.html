@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <a href="https://google.com">google</a> -->
+    <!-- <form action="https://mms-it.com">
+        <input type="text" name="a">
+        <input type="text" name="b">
+        <input type="text" name="c">
+        <button>Submit</button>
+    </form> -->
+
+    <div class="box">
+        <h1>Heading</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, suscipit. Quis corrupti ipsa voluptates excepturi nesciunt doloremque a omnis veritatis earum aperiam sint sapiente, tempora eaque repudiandae consectetur sed at?
+        </p>
+
+        <input type="file" style="display: none;" />
+
+        <ul class="list" style="border: 2px solid black;padding: 20px;">
+            <li class="list-item" style="border: 2px solid black;">Apple</li>
+            <li class="list-item">Orange</li>
+            <li class="list-item">Mango</li>
+            <li class="list-item">Banana</li>
+        </ul>
+
+        <button>Select File</button>
+    </div>
+    <script>
+
+        document.querySelector("button").addEventListener("click",()=>{
+            document.querySelector("[type='file']").click();
+        });
+
+        // const box = document.querySelector(".box");
+        // const h1 = document.querySelector("h1");
+        // const list = document.querySelector(".list");
+        // const listItem = document.getElementsByClassName("list-item");
+
+        // event listen to multiple element 
+        // const eventLists = ["click","mouseover","mouseout"];
+
+        // eventLists.forEach(eventList =>{
+        //     h1.addEventListener(eventList,event => console.log(event));
+        // });
+
+        // console.log(listItem);
+
+        // [...listItem].forEach(li => {
+        //     console.log(li);
+        //     li.addEventListener("click",()=> console.log(li.innerText));
+        // });
+
+
+        // node list 
+        // listItem.forEach(li => {
+        //     console.log(li);
+        //     li.addEventListener("click",()=> console.log(li.innerText));
+        // });
+
+
+        // document.body.addEventListener("click",()=> console.log("U Click Body"),false);
+        // box.addEventListener("click",()=> console.log("U Click Box"),false);
+        // list.addEventListener("click",(event)=> {
+        //     event.stopPropagation();
+        //     // alert("Hello");
+        //     // location.href ="https://mms-it.com";
+        //     console.log("U Click list");
+        // },true);
+        // listItem.addEventListener(
+        //     "click",
+        //     (event)=> {
+        //     // event.stopPropagation();
+        //     console.log("U Click list Item")});
+
+        // event bubbling => event emit from bottom to top 
+        // event capture => event emit from top to bottom 
+
+
+        // const f =document.querySelector("form");
+        // console.log(f);
+
+        // f.addEventListener("submit",(event) => {
+        //     // event.preventDefault();
+        //     const a = document.querySelector("[name='a']");
+        //     const b = document.querySelector("[name='b']");
+        //     const c = document.querySelector("[name='c']");
+
+        //     console.log(a.value,b.value,c.value);
+        // });
+
+
+        // const a= document.querySelector("a");
+        // a.addEventListener("click",event => {
+        //     console.log(event);
+        //     event.preventDefault();
+        // });
+    </script>
+</body>
+</html>

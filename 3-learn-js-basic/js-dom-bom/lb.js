@@ -5,17 +5,23 @@ const lists = document.querySelector("#lists");
 const total = document.querySelector("#total");
 const doneTotal = document.querySelector("#doneTotal");
 
-const data = ["sar pe p lar","morning","good night","read book","learn JavaScript"];
+const data = [
+  "sar pe p lar",
+  "morning",
+  "good night",
+  "read book",
+  "learn JavaScript",
+];
 
 const counter = () => {
-  const totalCount =lists.children.length
+  const totalCount = lists.children.length;
   const doneTotalCount = [...lists.children].filter(
     (el) => el.querySelector(".form-check-input").checked === true
-    ).length;
-   
+  ).length;
+
   total.innerText = totalCount;
   doneTotal.innerText = doneTotalCount;
-}
+};
 
 const createLi = (text) => {
   const dynamicId = "flexCheck" + Math.random();
@@ -38,10 +44,10 @@ const createLi = (text) => {
     </div>
 
     <div class="btn-group ms-auto">
-      <button class="btn btn-outline-dark btn-sm ms-auto" onclick="edit(event)">
+      <button class="btn btn-outline-dark btn-sm edit-btn">
           <i class=" bi bi-pencil pe-none"></i>
       </button>
-      <button class="btn btn-outline-dark btn-sm ms-auto" onclick="del(event)">
+      <button class="btn btn-outline-dark btn-sm del-btn">
           <i class=" bi bi-trash pe-none"></i>
       </button>
     </div>
@@ -81,17 +87,45 @@ const done = (event) => {
 
 const edit = (event) => {
   // console.log(event.target);
-  const old = event.target.closest(".list-group-item").querySelector(".form-check-label");
+  const old = event.target
+    .closest(".list-group-item")
+    .querySelector(".form-check-label");
   const newText = prompt("Input New Text", old.innerText);
   // console.log(newText);
-  if(newText && newText.trim()){
+  if (newText && newText.trim()) {
     old.innerText = newText;
-
   }
 };
 
-
 data.forEach((d) => lists.append(createLi(d)));
+
+// [...lists.children].forEach(li =>{
+//   li.querySelector(".edit-btn").addEventListener("click",edit);
+//   li.querySelector(".del-btn").addEventListener("click",del);
+
+// });
+
+lists.addEventListener("click",(event) => {
+  // console.log(event.target);
+  if(event.target.classList.contains("del-btn")){
+    // to delete 
+    del(event);
+    // if (confirm("Are you sure to delete ?")) {
+    //   event.target.closest(".list-group-item").remove();  
+    //   counter();
+    // }
+  }else if(event.target.classList.contains("edit-btn")){
+    // to edit 
+    edit(event);
+  //   const old = event.target.closest(".list-group-item")
+  //   .querySelector(".form-check-label");
+  //   const newText = prompt("Input New Text", old.innerText);
+  // // console.log(newText);
+  //   if (newText && newText.trim()) {
+  //     old.innerText = newText;
+  //   }
+  }
+})
 
 createBtn.addEventListener("click", addList);
 
@@ -102,4 +136,4 @@ textInput.addEventListener("keyup", (event) => {
   }
 });
 
-window.addEventListener("load",counter);
+window.addEventListener("load", counter);
